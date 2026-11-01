@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    border: 0;
+}
+a {
+    color: inherit;
+}
+
+:root {
+    --background-color: #DDB786;
+    --text-color: #1F1F6F;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0a23;
+    color: var(--text-color);
+}
+
+.container {
+    border: 0.4rem solid var(--text-color);
+    border-radius: 0.2rem;
+    padding: 1.1rem 1.3rem;
+    background-color: var(--background-color);
+    box-shadow: 0px 0px 10px 5px var(--background-color);
+    overflow: hidden;
+}
+.container hr {
+    height: 5px;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.container h1, .container h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.container h2 {
+    margin-top: 5px;
+}
+
+.container .intro p:last-of-type {
+    width: fit-content;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.container .intro p:last-of-type::after {
+    content: "This isn't a real email address.";
+    color: rgb(148, 0, 0);
+    padding: 5px;
+    margin-left: 1.3rem;
+    font-size: .9rem;
+    border-radius: 5px;
+
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+.container .intro p:last-of-type:hover::after {
+    display: inline;
+    opacity: 1;
+    visibility: visible;
+}
+.container p {
+    line-height: 24px;
+}
+.container ul li {
+    position: relative;
+    padding: 2px 0;
+}
+
+.container ul:not(.links) li::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.container .experience .note {
+    animation: color-change 2s ease-in-out .5s infinite;
+    cursor: not-allowed;
+}
+@keyframes color-change {
+    0% {
+        transform: translateY(50%);
+        color: var(--text-color);
+    }
+    25% {
+        color: rgba(82, 25, 25, 0.649);
+    }
+    50% {
+        color: var(--text-color);
+    }
+    100% {
+        color: rgba(82, 25, 25, 0.649);
+    }
+}
+.container .social-media {
+    padding-top: 10px;
+}
+.container .social-media ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.container .social-media ul li a:hover {
+    color: var(--text-color);
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 70vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 63vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 40vw;
+    }
+}
