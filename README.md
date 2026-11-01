@@ -10,4 +10,4 @@ The project consists of only a single page of plain HTML and a little bit of sty
 - Last but not least, there is the experience section. I still don't have a real world experience when it comes to the tech industry, so the company you will see in the project is just an example. I didn't work there.
 - In footer you will find two links, one for LinkedIn - I also don't have a LinkedIn profile, so the link will lead you straight to the actual page of LinkedIn. You also got my GitHub account, this one is real, and will load my GitHub account in a separate tab.
 
-- https://ebrar0ssi.github.io/Single-Page-CV/
+https://ebrar0ssi.github.io/Single-Page-CV/
